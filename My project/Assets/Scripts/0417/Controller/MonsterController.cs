@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class MonsterController : MonoBehaviour
 {
-    public int MonsterHp = 5;
-
-    public void Damanged(int dam)
+    public int Monster_Hp = 5;          //���� HP ����
+    public void Damanged(int Damage)    //������ �޴� �Լ� ����
     {
-        MonsterHp -= dam;
-        if (MonsterHp <= 0)
+        Monster_Hp -= Damage;           //���� ������ HP�� �ݿ�
+
+        if (Monster_Hp < 0)              //0 ���Ϸ� ��������
         {
-            Destroy(gameObject);
+            Destroy(this.gameObject);   //���� ������Ʈ �ı�
         }
     }
 }
